@@ -8,7 +8,7 @@
 
 ## Visuals
 > <img src="https://www.researchgate.net/profile/Antonio_Busson/publication/336435015/figure/fig7/AS:814975819976715@1571316785707/a-Keypoints-that-can-be-detected-by-the-OpenPose-algorithm-3-Image-adapted-from.ppm" align="left" height="400" width="300" >
-> <img src="https://s3-ap-northeast-1.amazonaws.com/ledge-assets/media/wp-content/uploads/2018/02/27140445/openpose_eyecatch.jpg" align="left" height="200" width="600" >
+> <img src="https://s3-ap-northeast-1.amazonaws.com/ledge-assets/media/wp-content/uploads/2018/02/27140445/openpose_eyecatch.jpg" height="200" width="600" >
 ## Team
 > * [Acchiardi Paolo](https://github.com/paoloacchiardi "paoloacchiardi")
 > * [Badoino Matteo](https://github.com/BadoinoMatteo "BadoinoMatteo")
