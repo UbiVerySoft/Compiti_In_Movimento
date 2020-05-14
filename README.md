@@ -8,7 +8,7 @@
 
 ## Visuals
 
-> <img src="https://www.researchgate.net/profile/Antonio_Busson/publication/336435015/figure/fig7/AS:814975819976715@1571316785707/a-Keypoints-that-can-be-detected-by-the-OpenPose-algorithm-3-Image-adapted-from.ppm" align="left" height="400" width="300" >
+> Prossimamente immagini del progetto
 
 ## Team
 
