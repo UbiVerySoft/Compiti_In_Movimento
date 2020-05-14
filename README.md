@@ -8,6 +8,7 @@
 
 ## Visuals
 > ![OpenPose](https://www.researchgate.net/profile/Antonio_Busson/publication/336435015/figure/fig7/AS:814975819976715@1571316785707/a-Keypoints-that-can-be-detected-by-the-OpenPose-algorithm-3-Image-adapted-from.ppm)
+> ![OpenPose](https://www.google.com/urlsa=i&url=https%3A%2F%2Farxiv.org%2Fpdf%2F1812.08008&psig=AOvVaw17fE9Cs0aN15lWAPBqSr8V&ust=1589554357858000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPj3rcjNs-kCFQAAAAAdAAAAABA-)
 
 ## Team
 > * [Acchiardi Paolo](https://github.com/paoloacchiardi "paoloacchiardi")
