@@ -1,10 +1,10 @@
 # Compiti In Movimento
 
->Questa repo contiene il nostro progetto fatto in collaborazione con l'IIT di Genova
+> Questo repo contiene il nostro progetto fatto in collaborazione con l'IIT di Genova
 
 ## Descrizione del progetto:
 
->E' un gioco d'azione 2D. Combatti, schiva, salta, affronta i nemici in molteplici scenari... tutto questo con il tuo corpo. Usa gli oggetti presenti nella mappa per combattere i nemici e dominare la battaglia.
+> E' un gioco d'azione 2D. Combatti, schiva, salta, affronta i nemici in molteplici scenari... tutto questo con il tuo corpo. Usa gli oggetti presenti nella mappa per combattere i nemici e dominare la battaglia.
 
 ## Team
 > * [Acchiardi Paolo](https://github.com/paoloacchiardi "paoloacchiardi")
