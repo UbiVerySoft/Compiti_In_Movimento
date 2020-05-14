@@ -1,14 +1,14 @@
 # Compiti In Movimento
 
-> Questo repo contiene il nostro progetto fatto in collaborazione con l'IIT di Genova
+> This repository contains our project made in collaboration with IIT of Genoa.
 
 ## Description
 
-> E' un gioco d'azione 2D. Combatti, schiva, salta, affronta i nemici in molteplici scenari... tutto questo con il tuo corpo. Usa gli oggetti presenti nella mappa per combattere i nemici e dominare la battaglia.
+> It's a 2D Action game. Fight, dodge, jump, face enemies in multiple maps ... all this with your body. Use items in the maps to fight enemies and dominate the battle.
 
 ## Visuals
 
-> Prossimamente immagini del progetto
+> Project's images will be available soon.
 
 ## Team
 
