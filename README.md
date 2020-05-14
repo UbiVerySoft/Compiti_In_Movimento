@@ -2,9 +2,12 @@
 
 > Questo repo contiene il nostro progetto fatto in collaborazione con l'IIT di Genova
 
-## Descrizione del progetto:
+## Description
 
 > E' un gioco d'azione 2D. Combatti, schiva, salta, affronta i nemici in molteplici scenari... tutto questo con il tuo corpo. Usa gli oggetti presenti nella mappa per combattere i nemici e dominare la battaglia.
+
+## Visuals
+> ![OpenPose](https://www.researchgate.net/profile/Antonio_Busson/publication/336435015/figure/fig7/AS:814975819976715@1571316785707/a-Keypoints-that-can-be-detected-by-the-OpenPose-algorithm-3-Image-adapted-from.ppm)
 
 ## Team
 > * [Acchiardi Paolo](https://github.com/paoloacchiardi "paoloacchiardi")
