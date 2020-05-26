@@ -17,3 +17,7 @@
 > * [Bernardi Gianluca](https://github.com/GianluBerna "GianluBerna")
 > * [Bruno Francesco](https://github.com/FraBrunoSchool "FraBrunoSchool")
 > * [Nardi Simone](https://github.com/SimoNardi "SimoNardi")
+
+## Thanks
+> * **I.I.T. of Genoa**
+> * **I.T.I.S. Mario Delpozzo**
