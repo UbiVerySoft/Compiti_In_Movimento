@@ -19,5 +19,5 @@
 > * [Nardi Simone](https://github.com/SimoNardi "SimoNardi")
 
 ## Thanks
-> ** * I.I.T. of Genoa**
-> ** * I.T.I.S. Mario Delpozzo**
+> * **I.I.T. of Genoa**
+> * **I.T.I.S. Mario Delpozzo**
