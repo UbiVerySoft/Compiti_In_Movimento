@@ -9,6 +9,7 @@ public class Campo {
     public Campo(PApplet prc, int[][] pos){
         this.processing = prc;
         campo = new int[BORDIY][BORDIX];
+
         for (int y = 0; y < BORDIY; y++) {
             for (int x = 0; x < BORDIX; x++) {
                 if (y==0 || y==BORDIY-1 || x==0 || x==BORDIX-1) campo[y][x]=1;
@@ -43,5 +44,6 @@ public class Campo {
 
     public void show() {
         creaCampo();
+
     }
 }

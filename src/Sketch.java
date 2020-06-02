@@ -12,7 +12,8 @@ import java.util.Vector;
 public class Sketch extends PApplet {
     private PFont f;
     private Button b;
-    private Campo c;
+
+    Movimento m;
     private Vector<Monete> moneteVector;
     private int pagina = 0;
     private PImage imgPlayer;
@@ -28,8 +29,6 @@ public class Sketch extends PApplet {
     float l_wrist_x;
     float l_wrist_y;
 
-    Movimento m;
-
     byte[] buf = new byte[24]; //Set your buffer size as desired
 
     public static void main(String[] args) {
@@ -44,14 +43,13 @@ public class Sketch extends PApplet {
         f = createFont("stocky.ttf", 24);
         textFont(f);
         b = new Button(this);
-        int pos[][]={{15,10},{15,11},{15,12},{15,13},{15,14},{15,15},{15,16},{15,17},{15,18},{15,17},
-                {14,18},{14,19},{13,19},{13,20},{12,20},{12,21},{11,21},{11,21},{5,10},{5,11},{15,1},{15,2},{15,2}};
-        c = new Campo(this, pos);
+        m = new Movimento(this);
+
         moneteVector = new Vector<Monete>();
         for (int i = 0; i < N_MONETE; i++) moneteVector.add(new Monete(this));
         bg = loadImage("bg.jpg");
         imgPlayer = loadImage("personaggio.png");
-        m = new Movimento(this);
+
         background(189,183,107);
         try {
             socket = new DatagramSocket(4124); // Set your port here
@@ -98,7 +96,6 @@ public class Sketch extends PApplet {
         }
         if(pagina == 1){
             println("Pagina Game");
-            c.show();
             m.show(nose_x, nose_y);
         }
     }
@@ -107,4 +104,5 @@ public class Sketch extends PApplet {
         println("Click");
         pagina = 1;
     }
+
 }
