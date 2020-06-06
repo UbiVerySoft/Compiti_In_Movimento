@@ -35,24 +35,23 @@ public class Movimento{
     }
 
     public void show(float nose_x, float nose_y){
-        if (nose_x>0 && nose_x<640 ){
-            cordX= (1920*nose_x)/840;
+        if (nose_x>0 && nose_x<1270 ){
+            cordX = (float) (1920*nose_x)/1270;
         }
 
         //movimento asse orizzontale con cordinata X del naso
-        if(nose_y>0 && nose_y<(400-grandezza)){
-            cordY= (float) (((1080*nose_y)/470)*9.81);
+        if(nose_y>0 && nose_y<(712-grandezza)){
+            cordY = (float) ((1080*nose_y)/712);
         }
 
             proceesing.clear();
             stop=c.show(cordX, cordY, larghezza, grandezza);
-        if (stop == false ) {
+
+        if (!stop) {
             proceesing.image(personaggio, cordX, cordY, grandezza, larghezza );
             cordYPrec=cordY;
             cordXPrec=cordX;
         }else{
-            proceesing.clear();
-            //stop=c.show(cordX, cordY, larghezza, grandezza);
             proceesing.image(personaggio, cordXPrec, cordYPrec, grandezza, larghezza );
         }
     }

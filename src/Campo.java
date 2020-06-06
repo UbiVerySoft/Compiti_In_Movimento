@@ -22,17 +22,10 @@ public class Campo {
     }
 
     public boolean show(float x, float y, float l, float g) {
-        //Vector<PApplet> ostacoli = new Vector<PApplet>();
-        boolean ferma=false;
-        for (int i = 0; i < BORDIY; i++){
-            for (int c = 0; c < BORDIX; c++ ){
-                switch (campo[i][c]){
+        for (int i = 0; i < BORDIY; i++) {
+            for (int c = 0; c < BORDIX; c++) {
+                switch (campo[i][c]) {
                     case 1:
-                        if(((processing.width/BORDIX)+1)*c == x && ((processing.height/BORDIY)+1)*i  == y && x>((processing.width/BORDIY)+1) &&
-                                x<((processing.width/BORDIY)+1) && y>((processing.height/BORDIX)+1)){
-                            ferma=true;
-
-                        }
                         processing.stroke(0);
                         processing.fill(0);
                         break;
@@ -41,10 +34,22 @@ public class Campo {
                         processing.fill(255);
                         break;
                 }
-                processing.rect( ((processing.width/BORDIX)+1)*c, ((processing.height/BORDIY)+1)*i,
-                        (processing.width/BORDIX)+1, (processing.height/BORDIY)+1);
+                processing.rect(((processing.width / BORDIX) + 1) * c, ((processing.height / BORDIY) + 1) * i,
+                        (processing.width / BORDIX) + 1, (processing.height / BORDIY) + 1);
             }
         }
-        return ferma;
+        for (int i = 0; i < BORDIY; i++) {
+            for (int c = 0; c < BORDIX; c++) {
+                if (campo[i][c] == 1) {
+                    if ((x + l) >= (((processing.width / BORDIX) + 1) * c) &&
+                            x <= ((((processing.width / BORDIX) + 1) * c) + ((processing.width / BORDIX) + 1)) &&
+                            (y + g) >= (((processing.height / BORDIY) + 1) * i) &&
+                            y <= (((processing.height / BORDIY) + 1)) * i + (processing.height / BORDIY) + 1 ){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }
