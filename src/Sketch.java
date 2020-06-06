@@ -89,7 +89,7 @@ public class Sketch extends PApplet {
         }
         if(pagina == 0){
             println("Pagina 0");
-            background(bg);
+            //background(bg);
             //image(imgPlayer, 50, 50);
             //for (Monete m: moneteVector) m.show();
             b.show();

@@ -1,5 +1,7 @@
 import processing.core.PApplet;
 
+import java.util.Vector;
+
 public class Campo {
     private static final int BORDIX = 30;
     private static final int BORDIY = 20;
@@ -19,11 +21,18 @@ public class Campo {
         for (int i = 0; i < pos.length; i++) campo[pos[i][0]][pos[i][1]]=1;
     }
 
-    public void creaCampo(){
-        for (int y = 0; y < BORDIY; y++){
-            for (int x = 0; x < BORDIX; x++ ){
-                switch (campo[y][x]){
+    public boolean show(float x, float y, float l, float g) {
+        //Vector<PApplet> ostacoli = new Vector<PApplet>();
+        boolean ferma=false;
+        for (int i = 0; i < BORDIY; i++){
+            for (int c = 0; c < BORDIX; c++ ){
+                switch (campo[i][c]){
                     case 1:
+                        if(((processing.width/BORDIX)+1)*c == x && ((processing.height/BORDIY)+1)*i  == y && x>((processing.width/BORDIY)+1) &&
+                                x<((processing.width/BORDIY)+1) && y>((processing.height/BORDIX)+1)){
+                            ferma=true;
+
+                        }
                         processing.stroke(0);
                         processing.fill(0);
                         break;
@@ -32,18 +41,10 @@ public class Campo {
                         processing.fill(255);
                         break;
                 }
-                processing.rect( ((processing.width/BORDIX)+1)*x, ((processing.height/BORDIY)+1)*y,
+                processing.rect( ((processing.width/BORDIX)+1)*c, ((processing.height/BORDIY)+1)*i,
                         (processing.width/BORDIX)+1, (processing.height/BORDIY)+1);
             }
         }
-    }
-
-    public void RiempiMatrice(){
-
-    }
-
-    public void show() {
-        creaCampo();
-
+        return ferma;
     }
 }
