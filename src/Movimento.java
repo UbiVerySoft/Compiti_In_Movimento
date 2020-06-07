@@ -22,6 +22,8 @@ public class Movimento{
     public Movimento(PApplet proceesing) {
         this.proceesing = proceesing;
         personaggio = proceesing.loadImage("personaggio.png");
+        cordYPrec = proceesing.height/2;
+        cordXPrec = proceesing.width/2;
         cordX = proceesing.width/2;
         cordY = proceesing.height/2;
         int pos[][]={{18,10},{18,11},{18,12},{18,13},{18,14},{18,15},{18,16},{18,17},{18,18},{17,11},
@@ -38,26 +40,24 @@ public class Movimento{
     }
 
     public void show(float nose_x, float nose_y){
-        if (nose_x>0 && nose_x<1270 ){
-            cordX = (float) (1920*nose_x)/400;
+        if (nose_x>0 && nose_x<620 && cordX<=cordXPrec){
+            cordX = (float) (1920*nose_x)/620;
         }
 
         //movimento asse orizzontale con cordinata X del naso
-        if(nose_y>0 && nose_y<(712-grandezza)){
-            cordY = (float) ((1080*nose_y)/680);
+        if(nose_y>0 && nose_y<(360-grandezza) && cordY<=cordYPrec){
+            cordY = (float) ((1080*nose_y)/360);
         }
 
             proceesing.clear();
-
+            stop=c.show(cordX, cordY, larghezza, grandezza);
 
         if (!stop) {
             proceesing.image(personaggio, cordX, cordY, grandezza, larghezza );
-            stop=c.show(cordX, cordY, larghezza, grandezza);
             cordYPrec=cordY;
             cordXPrec=cordX;
         }else{
             proceesing.image(personaggio, cordXPrec, cordYPrec, grandezza, larghezza );
-            stop=c.show(cordXPrec, cordYPrec, larghezza, grandezza);
         }
     }
 }
