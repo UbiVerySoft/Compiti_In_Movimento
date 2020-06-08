@@ -40,7 +40,7 @@ public class Movimento{
     }
 
     public void show(float nose_x, float nose_y){
-        if (nose_x>0 && nose_x<620 && cordX<=cordXPrec){
+        if (nose_x>0 && nose_x<600 && cordX<=cordXPrec){
             cordX = (float) (1920*nose_x)/620;
         }
 

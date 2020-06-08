@@ -14,6 +14,7 @@ public class Sketch extends PApplet {
     private Button b;
 
     Movimento m;
+    Nemici n;
     private Vector<Monete> moneteVector;
     private int pagina = 0;
     private PImage imgPlayer;
@@ -44,6 +45,7 @@ public class Sketch extends PApplet {
         textFont(f);
         b = new Button(this);
         m = new Movimento(this);
+        n = new Nemici(this);
 
         moneteVector = new Vector<Monete>();
         for (int i = 0; i < N_MONETE; i++) moneteVector.add(new Monete(this));
@@ -96,7 +98,10 @@ public class Sketch extends PApplet {
         }
         if(pagina == 1){
             println("Pagina Game");
+
             m.show(nose_x, nose_y);
+            n.show();
+
         }
     }
 
