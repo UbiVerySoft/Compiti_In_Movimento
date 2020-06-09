@@ -13,18 +13,18 @@ public class Sketch extends PApplet {
     private PFont f;
     private Button b;
 
-    Nemici n;
-    Movimento m;
+    private Nemici n;
+    private Movimento m;
     private Vector<Monete> moneteVector;
     private int pagina = 0;
     private PImage imgPlayer;
     private PImage bg;
     private final int N_MONETE = 10;
-    DatagramSocket socket;
-    DatagramPacket packet;
+    private DatagramSocket socket;
+    private DatagramPacket packet;
 
-    float nose_x;
-    float nose_y;
+    float nose_x = 0;
+    float nose_y= 0;
     float r_wrist_x;
     float r_wrist_y;
     float l_wrist_x;
@@ -41,6 +41,7 @@ public class Sketch extends PApplet {
     }
 
     public void setup() {
+
         f = createFont("stocky.ttf", 24);
         textFont(f);
         b = new Button(this);
@@ -49,10 +50,12 @@ public class Sketch extends PApplet {
 
         moneteVector = new Vector<Monete>();
         for (int i = 0; i < N_MONETE; i++) moneteVector.add(new Monete(this));
-        bg = loadImage("bg.jpg");
-        imgPlayer = loadImage("personaggio.png");
 
-        background(189,183,107);
+        bg = loadImage("bg.jpg");
+        imgPlayer = loadImage("Logo.png");
+
+        background(0,0,0);
+
         try {
             socket = new DatagramSocket(4124); // Set your port here
         } catch (Exception e) {
@@ -62,6 +65,7 @@ public class Sketch extends PApplet {
     }
 
     public void draw() {
+
         try {
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
             socket.receive(packet);
@@ -89,19 +93,18 @@ public class Sketch extends PApplet {
             e.printStackTrace();
             println(e.getMessage());
         }
+
         if(pagina == 0){
             println("Pagina 0");
-            //background(bg);
-            //image(imgPlayer, 50, 50);
-            //for (Monete m: moneteVector) m.show();
+            background(bg);
+            image(imgPlayer, 50, 50, 500, 500);
+            for (Monete m: moneteVector) m.show();
             b.show();
         }
         if(pagina == 1){
             println("Pagina Game");
-
             m.show(nose_x, nose_y);
             n.show();
-
         }
     }
 
@@ -109,5 +112,4 @@ public class Sketch extends PApplet {
         println("Click");
         pagina = 1;
     }
-
 }

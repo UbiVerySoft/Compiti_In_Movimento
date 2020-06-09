@@ -8,10 +8,12 @@
 
 ## Visuals
 
-> Project's images will be available soon.
+> ![Gioco](Gioco_Readme.PNG)
 
 ## Team
 
+
+> ![Gioco](Copertina_Gioco.png)
 > * [Acchiardi Paolo](https://github.com/paoloacchiardi "paoloacchiardi")
 > * [Badoino Matteo](https://github.com/BadoinoMatteo "BadoinoMatteo")
 > * [Bernardi Gianluca](https://github.com/GianluBerna "GianluBerna")
@@ -19,5 +21,6 @@
 > * [Nardi Simone](https://github.com/SimoNardi "SimoNardi")
 
 ## Thanks
+
 > * **I.I.T. of Genoa**
 > * **I.T.I.S. Mario Delpozzo**

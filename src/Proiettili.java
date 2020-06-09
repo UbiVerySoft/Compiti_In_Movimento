@@ -3,7 +3,9 @@ import processing.core.PImage;
 
 import java.util.Random;
 
-public class Proiettili { // classe per la gestione dei proiettili
+public class Proiettili {
+    // classe per la gestione dei proiettili
+
     //dichiarazione variabili
     private PApplet processing;
     private PImage nemico;
@@ -13,10 +15,11 @@ public class Proiettili { // classe per la gestione dei proiettili
     private  float changey;
     private  float changex;
 
-    float grandezza=10;
-    float larghezza=10;
+    private float grandezza=10;
+    private float larghezza=10;
 
     public Proiettili(PApplet prc, float x, float y, float l, float h){
+
         // creazione proiettili random
         this.processing = prc;
         nemico = processing.loadImage("Proiettili.png");
@@ -27,6 +30,7 @@ public class Proiettili { // classe per la gestione dei proiettili
     }
 
     void show() {
+
         //mostro proiettili creati
         processing.image(nemico, posx, posy, grandezza, larghezza);
         posy = posy + changey;

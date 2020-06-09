@@ -11,6 +11,7 @@ public class Campo { // classe per il campo da gioco
     private PApplet processing;
 
     public Campo(PApplet prc, int[][] pos){
+
         //creiamo un campo da gioco
         this.processing = prc;
         campo = new int[BORDIY][BORDIX];
@@ -25,6 +26,7 @@ public class Campo { // classe per il campo da gioco
     }
 
     public boolean show(float x, float y, float l, float g) {
+
         //mostro il campo
         for (int i = 0; i < BORDIY; i++) {
             for (int c = 0; c < BORDIX; c++) {
@@ -42,6 +44,7 @@ public class Campo { // classe per il campo da gioco
                         (processing.width / BORDIX) + 1, (processing.height / BORDIY) + 1);
             }
         }
+
         //controllo se il personaggio è vicino a un blocco quindi lo blocco il personaggio
         for (int i = 0; i < BORDIY; i++) {
             for (int c = 0; c < BORDIX; c++) {
@@ -49,9 +52,8 @@ public class Campo { // classe per il campo da gioco
                     if ((x + l) >= (((processing.width / BORDIX) + 1) * c) &&
                             x <= ((((processing.width / BORDIX) + 1) * c) + ((processing.width / BORDIX) + 1)) &&
                             (y + g) >= (((processing.height / BORDIY) + 1) * i) &&
-                            y <= (((processing.height / BORDIY) + 1)) * i + (processing.height / BORDIY) + 1 ){
+                            y <= (((processing.height / BORDIY) + 1)) * i + (processing.height / BORDIY) + 1 )
                         return true;
-                    }
                 }
             }
         }
