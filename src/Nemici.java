@@ -2,23 +2,38 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 import java.util.Random;
+import java.util.Vector;
 
 public class Nemici {
     private PApplet processing;
     private PImage nemico;
-    private final float posx = 450;
-    private final float posy = 610;
+    private float posx = 450;
+    private float posy = 610;
 
     float grandezza=60;
     float larghezza=60;
+    Vector<Proiettili> p;
+
+
 
     public Nemici(PApplet prc){
         this.processing = prc;
         nemico = processing.loadImage("nemico.png");
+        p = new Vector<Proiettili>();
+    }
+
+    public void addProiettili(){
+        p.add(new Proiettili(processing, posx, posy, grandezza, larghezza));
+    }
+
+    public void rmProiettili(){
+        p.remove(0);
     }
 
     void show() {
+        if (p.size()<10) addProiettili();
+        else rmProiettili();
         processing.image(nemico, posx, posy, grandezza, larghezza);
+        for (Proiettili pr :p) pr.show();
     }
-
 }

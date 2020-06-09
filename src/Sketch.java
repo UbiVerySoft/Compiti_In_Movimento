@@ -13,8 +13,8 @@ public class Sketch extends PApplet {
     private PFont f;
     private Button b;
 
-    Movimento m;
     Nemici n;
+    Movimento m;
     private Vector<Monete> moneteVector;
     private int pagina = 0;
     private PImage imgPlayer;
