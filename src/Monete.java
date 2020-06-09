@@ -3,7 +3,8 @@ import processing.core.PImage;
 
 import java.util.Random;
 
-public class Monete {
+public class Monete { // classe per la gestione delle monete
+    //dichiarazione variabili
     private float posx;
     private float posy;
     private float changey;

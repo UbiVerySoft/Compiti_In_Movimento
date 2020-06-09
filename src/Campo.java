@@ -2,13 +2,16 @@ import processing.core.PApplet;
 
 import java.util.Vector;
 
-public class Campo {
+public class Campo { // classe per il campo da gioco
+
+    //dichiarazione variabili
     private static final int BORDIX = 30;
     private static final int BORDIY = 20;
     private int[][] campo;
     private PApplet processing;
 
     public Campo(PApplet prc, int[][] pos){
+        //creiamo un campo da gioco
         this.processing = prc;
         campo = new int[BORDIY][BORDIX];
 
@@ -22,6 +25,7 @@ public class Campo {
     }
 
     public boolean show(float x, float y, float l, float g) {
+        //mostro il campo
         for (int i = 0; i < BORDIY; i++) {
             for (int c = 0; c < BORDIX; c++) {
                 switch (campo[i][c]) {
@@ -38,6 +42,7 @@ public class Campo {
                         (processing.width / BORDIX) + 1, (processing.height / BORDIY) + 1);
             }
         }
+        //controllo se il personaggio è vicino a un blocco quindi lo blocco il personaggio
         for (int i = 0; i < BORDIY; i++) {
             for (int c = 0; c < BORDIX; c++) {
                 if (campo[i][c] == 1) {

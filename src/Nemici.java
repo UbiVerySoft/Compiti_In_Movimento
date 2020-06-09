@@ -4,7 +4,8 @@ import processing.core.PImage;
 import java.util.Random;
 import java.util.Vector;
 
-public class Nemici {
+public class Nemici { // classe per la gestione dei nemici
+    //dichiarazione variabili
     private PApplet processing;
     private PImage nemico;
     private float posx = 450;
@@ -31,6 +32,7 @@ public class Nemici {
     }
 
     void show() {
+        //mostro il nemico e chiamo la funzione che mi mostra i proiettili
         if (p.size()<10) addProiettili();
         else rmProiettili();
         processing.image(nemico, posx, posy, grandezza, larghezza);
