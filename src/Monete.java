@@ -23,7 +23,7 @@ public class Monete {
         posy = rnd.nextInt(40);
         changex = 0;
         changey = (float) Math.random();
-        posy =-20*10;
+        posy =-20*5;
     }
 
     void show() {
